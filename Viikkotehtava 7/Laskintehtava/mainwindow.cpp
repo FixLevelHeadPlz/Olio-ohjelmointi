@@ -8,11 +8,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // yhdistetään napit funktioihin
     connect(ui->countButton, &QPushButton::clicked, this, &MainWindow::countClicked);
     connect(ui->resetButton, &QPushButton::clicked, this, &MainWindow::resetClicked);
 
-    ui->lineEdit->setText(QString::number(counter)); // näytetään aluksi 0
+    ui->lineEdit->setText(QString::number(counter));
 }
 
 MainWindow::~MainWindow()
@@ -31,3 +30,4 @@ void MainWindow::resetClicked()
     counter = 0;
     ui->lineEdit->setText(QString::number(counter));
 }
+
